@@ -1,0 +1,112 @@
+/* components/Header/Header.css */
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F9F9F9;
+  padding: 1rem;
+}
+
+.Logo {
+  height: 30px;
+}
+.Logo h3 {
+ color: #212121;
+ font-weight: 500;
+ font-size: 22px;
+ width: 94px;
+ height: 27px;
+}
+.Logo p{
+  color: #545454;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.94px;
+}
+
+.Search {
+  display: flex;
+  align-items: center;
+}
+
+.Search input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  background: #F1F5F1;
+}
+
+/* .Search button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+} */
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-container input {
+  width: 100%;
+  padding-right: 30px; /* Adjust for the icon */
+  box-sizing: border-box;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px; /* Adjust spacing from the right */
+  font-size: 1.2em; /* Adjust icon size */
+  color: gray; /* Optional: adjust icon color */
+}
+.dropdown-container {
+  display: flex;
+  gap: 10px; /* Space between dropdowns */
+  margin: .5rem 0rem 0rem 1rem;
+}
+
+.dropdown {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  color: #7E7E7E;
+  height: 32px;
+}
+.dropdownLocation{
+  width: 198px;
+}
+.dropdownStatus{
+  width: 148px;
+}
+
+.dropdown-with-icon {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.icon {
+  margin-right: 8px;
+  font-size: 20px; /* Adjust icon size */
+  color: gray; /* Optional: set icon color */
+}
+
+.dropdown {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  padding: 4px;
+}
+.rotate-icon{
+  transform: rotate(45deg);
+}
+

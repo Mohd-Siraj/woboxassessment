@@ -1,0 +1,31 @@
+/* components/CameraTable/CameraTable.css */
+.CameraTable {
+  padding: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+color: #545454;
+}
+
+th {
+  color: #7E7E7E;
+}
+.count{
+  display: flex;
+  align-items: center;
+}
+.navigation{
+  display: flex;
+  justify-content: right;
+  gap: 24px;
+  margin: 1rem;
+}

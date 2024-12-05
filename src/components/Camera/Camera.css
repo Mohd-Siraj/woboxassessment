@@ -1,0 +1,126 @@
+/* .Health {
+  font-weight: bold;
+}
+
+.Health--🟢 {
+  color: green;
+}
+
+.Health--🟡 {
+  color: yellow;
+}
+
+.Health--🔴 {
+  color: red;
+} */
+.green-border {
+  border: 2px solid green;
+}
+.orange-border {
+  border: 2px solid orange;
+}
+.yellow-border {
+  border: 2px solid yellow;
+}
+.yellow-border {
+  border: 2px solid yellow;
+}
+.red-border {
+  border: 2px solid red;
+}
+.brown-border {
+  border: 2px solid brown;
+}
+.violet-border {
+  border: 2px solid violet;
+}
+.grey-border {
+  border: 2px solid lightgray;
+}
+
+.border {
+  /* border: 2px solid green; */
+  padding: 1px 4px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.Actions {
+  cursor: pointer;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pagination button {
+  padding: 0.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 0.9rem;
+}
+tr > td {
+  vertical-align: middle;
+}
+
+.circle {
+  width: 20px; /* Set the width of the circle */
+  height: 20px; /* Set the height of the circle */
+  border-radius: 50%; /* Make it circular */
+  background: white; /* Background color of the circle */
+  position: relative;
+  overflow: hidden; /* Hide overflow */
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  top: -5px; /* Adjust to create a border effect */
+  left: -5px; /* Adjust to create a border effect */
+  right: -5px; /* Adjust to create a border effect */
+  bottom: -5px; /* Adjust to create a border effect */
+  border-radius: 50%;
+  background: linear-gradient(
+    270deg,
+    red,
+    yellow,
+    green,
+    blue
+  ); /* Gradient at 270 degrees */
+  z-index: -1; /* Place it behind the circle */
+}
+
+.Status--active {
+  color: #029262;
+  background-color: #0292621a;
+}
+
+.Status--inactive {
+  color: #545454;
+  background-color: #f0f0f0;
+}
+
+.Status {
+  border-radius: 2px;
+  padding: 5px 10px;
+  margin: 11px 0px 0px 14px;
+  font-size: 12px;
+}
+.cloudIcon {
+  width: 14.67px;
+  height: 12.67px;
+}
