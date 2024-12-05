@@ -1,25 +1,16 @@
 // components/Camera/Camera.js
 import React from "react";
 import "./Camera.css";
-import { MdBlockFlipped } from "react-icons/md";
 import { CiCloudOn } from "react-icons/ci";
 import { RiArchiveDrawerLine } from "react-icons/ri";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
 import { IoMdSwitch } from "react-icons/io";
 import { updateStatus } from "../../api/Cameraapi";
 import { useState } from "react";
-import { useEffect } from "react";
 import { useContext } from "react";
 import { CameraContext } from "../../contexts/CameraContext";
 
 function Camera({ camera, deleteCamera, setCameras, cameras }) {
-  // const [currentStatus, setCurrentStatus] = useState(camera?.status);
-  const [status, setStatus] = useState([]);
-
-  const { searchTerm, setSearchTerm } = useContext(CameraContext);
-
-  // const deleteCamera = () => {};
   const handleDelete = () => {
     deleteCamera(camera.id); // Trigger the delete handler passed from the parent
   };
@@ -53,7 +44,7 @@ function Camera({ camera, deleteCamera, setCameras, cameras }) {
         <p style={{ marginLeft: "1.3rem" }}>sherwinwilliams@wobot.ai</p>
       </td>
       <td>
-        <CiCloudOn className="cloudIcon"/>
+        <CiCloudOn className="cloudIcon" />
         <span
           className={` border ${
             camera?.health?.device === "A"
@@ -95,34 +86,6 @@ function Camera({ camera, deleteCamera, setCameras, cameras }) {
           {camera?.health.device ? camera.health.device : "N/A"}
         </span>
       </td>
-      {/* <td
-  className={`Health ${
-    camera?.health?.device === "A"
-      ? "Health--green"
-      : camera?.health?.device === "B"
-      ? "Health--warning"
-      : camera?.health?.device === "C"
-      ? "Health--yellow"
-      : ""
-  }`}
->
-  <CiCloudOn />
-  {camera?.health.cloud
-    ? camera.health.cloud
-        .split("")
-        .map((char) =>
-          String.fromCharCode(9398 + char.toLowerCase().charCodeAt(0) - 97)
-        )
-    : "N/A"}
-  <RiArchiveDrawerLine />
-  {camera?.health.device
-    ? camera.health.device
-        .split("")
-        .map((char) =>
-          String.fromCharCode(9398 + char.toLowerCase().charCodeAt(0) - 97)
-        )
-    : "N/A"}
-</td> */}
 
       <td>{camera?.location || "N/A"}</td>
       <td>{camera?.recorder || "N/A"}</td>
@@ -132,16 +95,14 @@ function Camera({ camera, deleteCamera, setCameras, cameras }) {
           {camera?.status || "N/A"}
         </span>
       </td>
+
       <td className="Actions">
-        {camera?.actions}
-        {/* <MdBlockFlipped /> */}
         <MdDelete onClick={handleDelete} />
         <IoMdSwitch
           onClick={handleToggleStatus}
           style={{ cursor: "pointer" }}
         />
       </td>
-      {/* <td></td> */}
     </tr>
   );
 }

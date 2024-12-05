@@ -13,10 +13,7 @@ function CameraTable() {
   };
   const { searchTerm, setSearchTerm } = useContext(CameraContext);
 
- 
-
-  
-   const [filteredCameras, setFilteredCameras] = useState([]);
+  const [filteredCameras, setFilteredCameras] = useState([]);
 
   const [cameras, setCameras] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -24,18 +21,18 @@ function CameraTable() {
   const [first, setFirst] = useState(0);
   const [last, setLast] = useState(10);
 
-   useEffect(() => {
-     if (searchTerm) {
-      console.log("inside search term", searchTerm)
-       const filtered = cameras.filter((camera) =>
-         camera?.name?.toLowerCase().includes(searchTerm.toLowerCase())
-       );
-       console.log("filtered", filtered)
-       setFilteredCameras(filtered);
-     } else {
-       setFilteredCameras(cameras); // Reset to full list if no search term
-     }
-   }, [searchTerm, cameras]);
+  useEffect(() => {
+    if (searchTerm) {
+      console.log("inside search term", searchTerm);
+      const filtered = cameras.filter((camera) =>
+        camera?.name?.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      console.log("filtered", filtered);
+      setFilteredCameras(filtered);
+    } else {
+      setFilteredCameras(cameras); // Reset to full list if no search term
+    }
+  }, [searchTerm, cameras]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -58,42 +55,15 @@ function CameraTable() {
   };
 
   const nextTenRow = () => {
-    if(last >= cameras.length) return
+    if (last >= cameras.length) return;
     setFirst(last);
     setLast(last + 10);
   };
   const previousTenRow = () => {
-    if(first <= 0) return
+    if (first <= 0) return;
     setFirst(first - 10);
     setLast(first);
   };
-
-  // Calculate the index of the first and last camera to display on the current page
-  const indexOfLastCamera = currentPage * itemsPerPage;
-  const indexOfFirstCamera = indexOfLastCamera - itemsPerPage;
-
-  // Get the cameras to display on the current page
-  const currentCameras = cameras.slice(indexOfFirstCamera, indexOfLastCamera);
-  const totalPages = Math.ceil(cameras.length / itemsPerPage);
-  // Change the current page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-  // Sample camera data
-  const cameraData = [
-    {
-      name: `${value.green} Camera 1`,
-      health: "🟢",
-      location: "New York City, NY",
-      recorder: "New York Recorder",
-      tasks: 3,
-      status: "Active",
-      actions: "...",
-      select: (
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-      ),
-    },
-    // Add more camera data objects as needed
-  ];
 
   return (
     <div className="CameraTable">
@@ -108,7 +78,6 @@ function CameraTable() {
                 value="Bike"
               />
             </th>
-            {/* <label for="vehicle1"></label><br></br> */}
             <th>NAME</th>
             <th>HEALTH</th>
             <th>LOCATION</th>
@@ -130,6 +99,7 @@ function CameraTable() {
           ))}
         </tbody>
       </table>
+      
       {/* Pagination */}
       <div className="navigation">
         <div className="count">

@@ -9,35 +9,25 @@ import { CameraContext } from "../../contexts/CameraContext";
 import { useState } from "react";
 
 function Header() {
-  const { cameras, setCameras } = useContext(CameraContext); // Use the context
-  // console.log("caemras", cameras);
   const { searchTerm, setSearchTerm } = useContext(CameraContext);
 
-    // const [searchTerm, setSearchTerm] = useState("");
-
-    const handleSearchChange = (event) => {
-      console.log(event.target.value);
-      setSearchTerm(event.target.value);
-      // onSearch(event.target.value);
-    };
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
 
   return (
     <>
       <header className="Header">
-        {/* <img src="logo.png" alt="Weboar.ai Logo" className="Logo" /> */}
         <div className="Logo">
           <h3>Cameras</h3>
           <p>Manage your cameras here</p>
         </div>
-        {/* <div className="Search">
-      <input type="text" placeholder="Search" />
-      <CiSearch />
-    </div> */}
+
         <div className="Search">
           <div className="input-container">
             <input
               type="text"
-              placeholder="Search"
+              placeholder="search"
               onChange={handleSearchChange}
               value={searchTerm}
             />

@@ -1,4 +1,4 @@
-/* components/Header/Header.css */
+
 .Header {
   display: flex;
   justify-content: space-between;
@@ -37,35 +37,33 @@
   background: #F1F5F1;
 }
 
-/* .Search button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-} */
+
 .input-container {
   position: relative;
   display: flex;
   align-items: center;
+  color: #A0A0A0;
 }
 
 .input-container input {
   width: 100%;
   padding-right: 30px; /* Adjust for the icon */
   box-sizing: border-box;
+  border: transparent;
+  width: 240px;
+  height: 40px;
+  color: #A0A0A0;
 }
 
 .search-icon {
   position: absolute;
-  right: 10px; /* Adjust spacing from the right */
-  font-size: 1.2em; /* Adjust icon size */
-  color: gray; /* Optional: adjust icon color */
+  right: 10px; 
+  font-size: 1.2em; 
+  color: gray; 
 }
 .dropdown-container {
   display: flex;
-  gap: 10px; /* Space between dropdowns */
+  gap: 10px; 
   margin: .5rem 0rem 0rem 1rem;
 }
 

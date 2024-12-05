@@ -1,4 +1,4 @@
-/* components/CameraTable/CameraTable.css */
+
 .CameraTable {
   padding: 1rem;
 }
@@ -14,10 +14,12 @@ th, td {
   text-align: left;
   border-bottom: 1px solid #ddd;
 color: #545454;
+font-weight: 400;
 }
 
 th {
   color: #7E7E7E;
+  font-weight: 500;
 }
 .count{
   display: flex;
